@@ -36,7 +36,7 @@ public class HttpServer {
 
 		Handler handler = new Handler(queueOut);
 		WorkThreadPool pool = new WorkThreadPool(handler, queueIn);
-		pool.start(1);
+		pool.start(8);
 
 		HttpServerResponse response = new HttpServerResponse(queueOut);
 		response.start();
